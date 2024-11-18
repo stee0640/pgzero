@@ -1,7 +1,5 @@
-import random
-BOGSTAVER = "abcdefghijklmnopqrstuvwxy"
-TAL = "0123456789_ /!?=+-"
-TEGN = BOGSTAVER + BOGSTAVER.upper() + TAL
+BOGSTAVER = "abcdefghijklmnopqrstuvwxyz"
+TEGN = BOGSTAVER + BOGSTAVER.upper() + "0123456789_ /!?=+-"
 
 def kodehjul(tekst, kode_nr):
     resultat = ""
@@ -15,9 +13,9 @@ def kodehjul(tekst, kode_nr):
         resultat += nyt_bogstav
     return resultat
 
-BRYD_DENNE_KODE_TEKST = "1FtuEjuIj-a-aacl"
-kode_nr = 16
+BRYD_DENNE_KODE_TEKST = "s?34!T4-TJKJKKMV"
 
+kode_nr = 52
 eksempel = "Kan I finde koden til pengeskabet? Den er ikke 01234"
 kode = kodehjul(eksempel, kode_nr)
 print("TEKST :", eksempel)
