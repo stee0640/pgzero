@@ -33,7 +33,7 @@ stjerne_liste = [
     (random.randint(0, WIDTH), random.randint(0, HEIGHT)) for _ in range(ANTAL_STJERNER)
 ]
 
-music.play("battleship")
+#music.play("battleship")
 
 
 def stjerner_tegn_og_flyt():
@@ -118,7 +118,7 @@ def ufoer_opdater():
         for anden_ufo in ufo_liste:
             if ufo.colliderect(anden_ufo):
                 ufo.vx, anden_ufo.vx = anden_ufo.vx, ufo.vx
-        if ufo.colliderect(rumskib):
+        if rumskib.liv > 0 and ufo.colliderect(rumskib):
             ufo_liste.remove(ufo)
             rumskib.liv -= 1
             rumskib.ramt = True
