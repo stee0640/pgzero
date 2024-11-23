@@ -33,7 +33,7 @@ stjerne_liste = [
     (random.randint(0, WIDTH), random.randint(0, HEIGHT)) for _ in range(ANTAL_STJERNER)
 ]
 
-#music.play("battleship")
+music.play("battleship")
 
 
 def stjerner_tegn_og_flyt():
@@ -103,8 +103,10 @@ def ufoer_skab_ufo():
 
 clock.schedule_interval(ufoer_skab_ufo, UFO_INTERVAL)
 
+
 def normalt_rumskib():
     rumskib.ramt = False
+
 
 def ufoer_opdater():
     for ufo in ufo_liste:
@@ -125,6 +127,7 @@ def ufoer_opdater():
             sounds.boom.play()
             clock.schedule(normalt_rumskib, 1)
 
+
 def skud_opdater():
     if keyboard.space:
         rumskib_skyd()
@@ -139,15 +142,20 @@ def skud_opdater():
                 ufo_liste.remove(ufo)
                 skud_liste.remove(skud)
 
+
 def draw():
     screen.clear()
     stjerner_tegn_og_flyt()
     if rumskib.liv > 0:
         rumskib.draw()
         if rumskib.ramt:
-            screen.draw.text(f"RAMT! {rumskib.liv} skjold tilbage", midtop=(WIDTH//2, HEIGHT//2), fontsize=70)
+            screen.draw.text(
+                f"RAMT! {rumskib.liv} skjold tilbage",
+                midtop=(WIDTH // 2, HEIGHT // 2),
+                fontsize=70,
+            )
     else:
-        screen.draw.text(f"GAME OVER", midtop=(WIDTH//2, HEIGHT//2), fontsize=70)
+        screen.draw.text(f"GAME OVER", midtop=(WIDTH // 2, HEIGHT // 2), fontsize=70)
     for ufo in ufo_liste:
         ufo.draw()
     for skud in skud_liste:
@@ -159,6 +167,7 @@ def draw():
         fontsize=70,
         shadow=(1, 1),
     )
+
 
 def update():
     if rumskib.liv > 0:
