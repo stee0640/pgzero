@@ -29,10 +29,6 @@ rumskib.ramt = False
 skud_liste = []
 ufo_liste = []
 
-stjerne_liste = [
-    (random.randint(0, WIDTH), random.randint(0, HEIGHT)) for _ in range(ANTAL_STJERNER)
-]
-
 music.play("battleship")
 
 sfy=-600

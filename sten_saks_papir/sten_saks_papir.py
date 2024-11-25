@@ -4,16 +4,13 @@ TING = ["sten", "saks", "papir"]
 def sammenlign_valg(pc_valg, dit_valg):
     if pc_valg == dit_valg:
         return "uafgjort"
-    if pc_valg == "sten":
-        if dit_valg == "papir": bedst = "dig"
-        else: bedst = "pc"
-    if pc_valg == "saks":
-        if dit_valg == "sten": bedst = "dig"
-        else: bedst = "pc"
-    if pc_valg == "papir":
-        if dit_valg == "saks": bedst = "dig"
-        else: bedst = "pc"
-    return bedst
+    if (
+        (dit_valg == "sten" and pc_valg == "saks")
+        or (dit_valg == "saks" and pc_valg == "papir")
+        or (dit_valg == "papir" and pc_valg == "sten")
+    ):
+        return "dig"
+    return "pc"
 
 pc = dig = 0
 while True:
