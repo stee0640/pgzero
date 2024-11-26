@@ -3,7 +3,7 @@ import random
 WIDTH = 600
 HEIGHT = 600
 SPEED = 10
-INTERVAL = 0.4
+INTERVAL = 0.5
 planeter = []
 
 def ny_planet():
