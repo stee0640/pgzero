@@ -6,9 +6,9 @@ HEIGHT = 400
 bedst = pc_valg = dit_valg = ""
 pc = dig = 0
 
-sten = Actor("sten2", pos=(200, 200))
-saks = Actor("saks2", pos=(400, 200))
-papir = Actor("papir2", pos=(600, 200))
+sten = Actor("sten", pos=(200, 200))
+saks = Actor("saks", pos=(400, 200))
+papir = Actor("papir", pos=(600, 200))
 
 
 def sammenlign_valg(pc_valg, dit_valg):
