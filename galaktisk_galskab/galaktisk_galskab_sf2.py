@@ -130,12 +130,13 @@ def skud_opdater():
         skud.y -= SKUD_HASTIGHED
         if skud.bottom < 0:
             skud_liste.remove(skud)
-        for ufo in ufo_liste:
-            if skud.colliderect(ufo):
-                rumskib.score += 1
-                sounds.boom.play()
-                ufo_liste.remove(ufo)
-                skud_liste.remove(skud)
+        else:
+            for ufo in ufo_liste:
+                if skud.colliderect(ufo):
+                    rumskib.score += 1
+                    sounds.boom.play()
+                    ufo_liste.remove(ufo)
+                    skud_liste.remove(skud)
 
 
 def draw():
