@@ -4,4 +4,4 @@ En række små spil i Pygame Zero, der kan køres direkte fra Mu Editor i Pygame
 
 Outline af forløbet og slides findes i [PygameZero.pdf](PygameZero.pdf)
 
-Filerne for udviklingen af de enkelte spil er nummeret, så de er en rækkefølge.
+Filerne for udviklingen af de enkelte spil er nummeret, så de er i rækkefølge.
